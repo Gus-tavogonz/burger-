@@ -1,6 +1,5 @@
 var mysql = require("mysql");
 
-var inquirer = require("inquirer");
 
 var connection = mysql.createConnection({
   host: "localhost",
@@ -16,7 +15,9 @@ var connection = mysql.createConnection({
 
 //Callback function --- After mysql connects it it runs the function
 connection.connect(function(err) {
-  if (err) throw err;
+  if (err) {
+    console.error("error connecting: " + err.stack)
+  }
   console.log("connected as id " + connection.threadId);
  
 

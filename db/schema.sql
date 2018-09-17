@@ -9,11 +9,3 @@ burger_name varchar(100) NOT NULL,
 devoured BOOLEAN NOT NULL DEFAULT 0,
 PRIMARY KEY (id)
 );
-
--- Insert a set of records.
-INSERT INTO movies (burger_name, devoured);
-VALUES ('Pizza Burger');
-
-
-
-

@@ -1,7 +1,4 @@
-var orm = require("./config/orm.js");
-
 var express = require("express");
-
 var bodyParser = require("body-parser");
 
 var PORT = process.env.PORT || 8080;
@@ -19,6 +16,17 @@ var exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs ({defaultLayout: "main"}));
 app.set("view engine","handlebars");
 
-//var routes = requier("")
+var routes = require("./controllers/burger_controller.js");
 
-orm.selectAll("burger_name","burgers");
+app.use(routes);
+
+app.listen(PORT, function(){
+    console.log("Server listening on: " + PORT)
+})
+
+///REMEMBER TO CHANGE THIS LATER!!!
+// orm.selectAll("burger_name","burgers", function(result){
+//     var data = result;
+//     console.log(data);
+// } );
+
