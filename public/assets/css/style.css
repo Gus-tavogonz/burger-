@@ -1,0 +1,31 @@
+body{
+    background-color: orange;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{
+    text-align: center;
+
+}
+
+h2{
+    text-align: center;
+    padding: 10px;
+
+}
+
+form{
+    text-align: center;
+    padding: 10px;
+}
+
+ul{
+    text-align: center;
+}
+
+
+li{
+    background-color: lightgray;
+    
+}
+
