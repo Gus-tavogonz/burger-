@@ -17,20 +17,18 @@ router.get("/", function(req,res){
 })
 
 router.get("/api/burgers", function(req,res){
-    burger.selectAll(function(data){
-        var hbsObject = {
-            burgers: data
-        }
-    })    
-})
+ 
+        res.json(burger);
+    })   
+
 
 
 
 router.post("/api/burgers", function(req,res){
-    burger.create([
+    burger.insertOne([
         "burger_name"
     ], [
-        req.body.name
+        req.body.name, 
     ], function(result){
         res.json({ id: result.insertId });
     })

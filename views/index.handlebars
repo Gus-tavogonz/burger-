@@ -6,28 +6,23 @@
     <div class="col-md-4">
 <ul>
     {{#each burgers}}
-
     <li>
         
         <p>You've Created: {{this.burger_name}}</p>
     </li>
-
-
-
-
 {{/each}} 
 </ul>
 </div>
 </div>
 
 
-<ul>
+{{!-- <ul>
     {{#each burgers}}
         {{#if devoured}}
         {{> burgers/burger-block devoured=false}}
         {{/if}}
     {{/each}}
-</ul>
+</ul> --}}
 
 
 <h2>Add a Burger!!</h2>
@@ -36,7 +31,7 @@
     <div class="form-group">
 
         <label for="bur">Burger Name:</label>
-        <input type="text" id="bur" name="name">
+        <input type="text" id="bur" name="burger_name">
     </div>
 
     <button type="submit"> Add a Burger! </button>

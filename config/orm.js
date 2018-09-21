@@ -25,7 +25,7 @@ function objToSql(ob){
 
         if (Object.hasOwnProperty.call(ob,key)){
             if (typeof value === "string" && value.indexOf(" ") >= 0){
-               value = " ' " + value + " ' " 
+               value = " ' " + value + " ' ";
             }
 
             arr.push(key + "=" + value);
@@ -45,7 +45,7 @@ var orm = {
             cb(result);
         })
     },
-    create: function(table, cols,vals, cb){
+    insertOne: function(table, cols,vals, cb){
         var queryString = "INSERT INTO " + table;
 
         queryString += " (";
@@ -68,7 +68,7 @@ var orm = {
     update: function(table, objColVals, condition, cb){
         var queryString = "UPDATE " + table; 
 
-        queryString += "SET ";
+        queryString += " SET ";
         queryString += objToSql(objColVals);
         queryString += " WHERE ";
         queryString += condition;
