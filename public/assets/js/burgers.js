@@ -1,20 +1,20 @@
 // DEVOURED
 
 $(function(){
-    $(".changedevoured").on("submit", function(event){
+    $(".changedevoured").on("click", function(event){
         event.preventDefault();
 
         var id = $(this).data("id");
-        //var newDevoured = $(this).data("newdevour")
+        //var newDevoured = $(this).val()
 
-        var newDevouredState = {
-            devoured: $("#devour").val().trim()
+        var updateBurger = {
+            devoured: $("#devoured").val().trim()
         };
 
 
         $.ajax("/api/burgers/" + id,{
             type:"PUT",
-            data:newDevouredState
+            data:updateBurger
         }).then(
             function(){
                 console.log("chaged devour to", newDevoured);

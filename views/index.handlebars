@@ -15,9 +15,9 @@
         <p class="card-text">
     {{this.burger_name}}
         </p>
-       <form data-id={{this.id}} action="/api/burgers/" method="PUT" >
- 
-       <button type="submit" class="btn btn-primary" class="changedevoured" name="devour" id="devour" value="1"> Devour! </button>
+       <form data-id="{{this.id}}" method="PUT" class="changedevoured" >
+         
+       <button type="submit" class="btn btn-primary"  name="devoured" id="devoured" value="1"> Devour! </button>
        </form>
       </div>
     </div>
@@ -25,11 +25,6 @@
 {{/each}} 
 
   </div>
-
-
-
-
-
 
 <div class="container devoured">
 
@@ -44,8 +39,6 @@
   
     
     {{this.burger_name}}
-
-
     </p>
       
       </div>
