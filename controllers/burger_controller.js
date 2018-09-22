@@ -16,19 +16,19 @@ router.get("/", function(req,res){
     })
 })
 
-router.get("/api/burgers", function(req,res){
+// router.get("/api/burgers", function(req,res){
  
-        res.json(burger);
-    })   
+//         res.json(burger);
+//     })   
 
 
 
 
 router.post("/api/burgers", function(req,res){
-    burger.insertOne([
+    burger.create([
         "burger_name"
     ], [
-        req.body.name, 
+        req.body.burger_name, 
     ], function(result){
         res.json({ id: result.insertId });
     })

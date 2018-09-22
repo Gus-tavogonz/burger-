@@ -29,7 +29,7 @@ $(function(){
 
 $(".create-form").on("submit", function(event){
 
-    event.prevenDeafault();
+    event.preventDefault();
 
     var newBurger = {
         burger_name:$("#bur").val().trim()

@@ -2,38 +2,69 @@
 
 <h2>These are some good Burgers!</h2>
 
+
+
 <div class="container">
-    <div class="col-md-4">
-<ul>
+
+  <div class="col-sm-6">
     {{#each burgers}}
-    <li>
-        
-        <p>You've Created: {{this.burger_name}}</p>
-    </li>
+    {{#unless this.devoured}}
+    <div class="card">
+    
+      <div class="card-body">
+   
+        <p class="card-text">
+    {{this.burger_name}}
+        </p>
+        <a href="#" class="btn btn-primary">Devour!!</a>
+      </div>
+    </div>
+    {{/unless}}
 {{/each}} 
-</ul>
-</div>
-</div>
+
+  </div>
 
 
-{{!-- <ul>
-    {{#each burgers}}
-        {{#if devoured}}
-        {{> burgers/burger-block devoured=false}}
-        {{/if}}
-    {{/each}}
-</ul> --}}
+
+
+
+
+<div class="container devoured">
+
+  <div class="col-sm-6">
+      {{#each burgers}}
+    {{#if this.devoured}}
+    <div class="card">
+    
+      <div class="card-body">
+   
+        <p class="card-text">
+  
+    
+    {{this.burger_name}}
+
+
+    </p>
+      
+      </div>
+    </div>
+    {{/if}}
+{{/each}} 
+  </div>    
+  </div>
+
+
 
 
 <h2>Add a Burger!!</h2>
-<form class="create-form">
+<form class="create-form" action="/api/burgers" method="POST">
 
     <div class="form-group">
 
         <label for="bur">Burger Name:</label>
-        <input type="text" id="bur" name="burger_name">
+        <input type="text" id="bur" name="burger_name" placeholder="What do you feel like getting?">
     </div>
 
-    <button type="submit"> Add a Burger! </button>
+    <button type="submit" class="add-burger"> Add a Burger! </button>
 </form>
 
