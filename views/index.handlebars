@@ -5,7 +5,6 @@
 
 
 <div class="container">
-
   <div class="col-sm-6">
     {{#each burgers}}
     {{#unless this.devoured}}
@@ -16,7 +15,10 @@
         <p class="card-text">
     {{this.burger_name}}
         </p>
-        <a href="#" class="btn btn-primary">Devour!!</a>
+       <form data-id={{this.id}} action="/api/burgers/" method="PUT" >
+ 
+       <button type="submit" class="btn btn-primary" class="changedevoured" name="devour" id="devour" value="1"> Devour! </button>
+       </form>
       </div>
     </div>
     {{/unless}}

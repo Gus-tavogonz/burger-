@@ -1,12 +1,14 @@
 // DEVOURED
 
 $(function(){
-    $(".change-devoured").on("click", function(event){
+    $(".changedevoured").on("submit", function(event){
+        event.preventDefault();
+
         var id = $(this).data("id");
-        var newDevoured = $(this).data("newdeveoured")
+        //var newDevoured = $(this).data("newdevour")
 
         var newDevouredState = {
-            devoured: newDevoured
+            devoured: $("#devour").val().trim()
         };
 
 
