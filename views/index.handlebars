@@ -15,9 +15,9 @@
         <p class="card-text">
     {{this.burger_name}}
         </p>
-       <form data-id="{{this.id}}" method="PUT" class="changedevoured" >
+       <form  method="PUT" >
          
-       <button type="submit" class="btn btn-primary"  name="devoured" id="devoured" value="1"> Devour! </button>
+       <button type="submit" data-id="{{this.id}}" class="btn btn-primary changedevoured"  name="devoured" id="devoured" value="1"> Devour! </button>
        </form>
       </div>
     </div>

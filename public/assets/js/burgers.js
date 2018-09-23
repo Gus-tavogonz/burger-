@@ -5,7 +5,7 @@ $(function(){
         event.preventDefault();
 
         var id = $(this).data("id");
-        //var newDevoured = $(this).val()
+        var newDevoured = $(this).val()
 
         var updateBurger = {
             devoured: $("#devoured").val().trim()
