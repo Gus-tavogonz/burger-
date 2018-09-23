@@ -29,4 +29,6 @@ connection.connect(function(err) {
 
 });
 
+connection.connect();
+
 module.exports = connection;
