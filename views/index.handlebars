@@ -60,13 +60,13 @@
 
 
 
-<h2 id="add">Add a Burger!!</h2>
-<form class="create-form" >
+<h2>Add a Burger!!</h2>
+<form class="create-form" action="/api/burgers" method="post">
 
     <div class="form-group">
 
         <label for="bur">Burger Name:</label>
-        <input type="text" class="form-control" id="bur" name="burger_name" placeholder="What do you feel like getting?">
+        <input type="text"  id="bur" class="form-control" name="burger_name" placeholder="What do you feel like getting?">
     </div>
 
     <button type="submit" class="add-burger btn btn-primary"> Add a Burger! </button>
