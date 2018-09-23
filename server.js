@@ -20,8 +20,8 @@ var routes = require("./controllers/burger_controller.js");
 
 app.use(routes);
 
-app.listen(PORT, function(){
-    console.log("Server listening on: " + PORT)
+app.listen(process.env.PORT || 8080, function(){
+    console.log("App listening on PORT " + PORT);
 })
 
 ///REMEMBER TO CHANGE THIS LATER!!!
