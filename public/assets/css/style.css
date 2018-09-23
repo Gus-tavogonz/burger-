@@ -5,13 +5,13 @@ body{
 
 h1{
     text-align: center;
-
+    font-weight: bold
 }
 
 h2{
     text-align: center;
     padding: 10px;
-
+    font-weight: bold
 }
 
 form{
@@ -35,6 +35,12 @@ li{
     
 }
 
-.devoured{
-    float:right;
+.middle img{
+   
+	display: block;
 }
+
+#add{
+    font-weight: bold
+}
+
