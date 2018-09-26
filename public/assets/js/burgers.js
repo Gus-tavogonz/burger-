@@ -29,9 +29,10 @@ $(function(){
 
 //CREATE
 
-$(".create-form").on("submit", function(event){
+$("#submit-form").on("click", function(event){
+    console.log("")
 
-    event.preventDefault();
+event.preventDefault();
 
     var newBurger = {
         burger_name:$("#bur").val().trim()

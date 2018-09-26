@@ -24,13 +24,12 @@ router.get("/", function(req,res){
 
 
 
-router.post("/api/burgers/", function(req,res){
-    burger.create([
-        "burger_name"
-    ], [
+router.post("/api/burgers", function(req,res){
+    burger.create(
         req.body.burger_name, 
-    ], function(result){
+     function(result){
         res.json({ id: result.insertId });
+        res.redirect("/");
     })
 })
 
